@@ -1,0 +1,150 @@
+/* Unified Design - Same as Register Form */ 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color:white;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+}
+.heading {
+    text-align: center;
+    font-weight: 900;
+    font-size: 28px;
+    color: #ff6b6b;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+label {
+    position: relative;
+}
+.input {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 20px 10px 5px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+    font-size: medium;
+}
+label span {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+.input:placeholder-shown + span {
+    top: 12.5px;
+    font-size: 0.9em;
+}
+.input:focus + span,
+.input:valid + span {
+    color: #ff6b6b;
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+.submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #ff6b6b;
+    transition: .3s ease;
+}
+.submit:hover {
+    background-color:rgb(185, 51, 36);
+}
+.forgot-password {
+    text-align: right;
+    font-size: 12px;
+    margin-top: -8px;
+}
+.forgot-password a {
+    color: #ff6b6b;
+    text-decoration: none;
+}
+.forgot-password a:hover {
+    text-decoration: underline #ff6b6b;
+}
+.social-account-container {
+    margin-top: 20px;
+    text-align: center;
+}
+.social-account-container .title {
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.social-accounts {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.social-button {
+    background: #333;
+    border: 5px solid white;
+    padding: 8px;
+    border-radius: 50%;
+    width: 40px;
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    transition: all 0.2s ease-in-out;
+}
+.social-button:hover {
+    transform: scale(1.2);
+}
+.social-button:active {
+    transform: scale(0.9);
+}
+.svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+}
+.agreement {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+.agreement a {
+    text-decoration: none;
+    color: #00bfff;
+    font-size: 11px;
+}
+.agreement a:hover {
+    text-decoration: underline royalblue;
+}
+
+/* Responsiveness */
+@media (max-width: 400px) {
+    .container {
+        padding: 15px;
+    }
+    .input {
+        padding: 18px 10px 5px 10px;
+    }
+}

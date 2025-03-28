@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real Estate FAQ Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs | LandVerse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/styles/samplertrp.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff5a5f;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff5a5f;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: url('https://source.unsplash.com/1600x500/?real-estate,buildings') no-repeat center/cover;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            margin-left: 300px;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 50px;
+            background-color: #fff;
+            max-width: 800px;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .faq {
+            background: #f9f9f9;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #2c3e50;
+        }
+
+        .toggle-icon {
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 15px;
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+        }
+
+        .footer-logo {
+            font-size: 20px;
+        }
+
+        .footer p {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        /* Responsive Design */
+
+/* Tablets (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .hero-section {
+        height: 200px;
+        margin-left: 0;
+        background-position: center;
+    }
+
+    .faq-section {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .faq-question {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    .hero-section {
+        height: 180px;
+        padding: 20px;
+        text-align: center;
+        background-size: cover;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .faq-section {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .faq-question {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero-section {
+        height: 150px;
+        padding: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .faq-section {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .faq-question {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .toggle-icon {
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    .footer-logo {
+        font-size: 18px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">LandVerse</div>
+        <nav>
+            <ul>
+                <li><a href="/samplertrp.html">Home</a></li>
+                <li><a href="/Nav-headers/about.html">About</a></li>
+                <li><a href="/Nav-headers/services.html">Services</a></li>
+                <li><a href="/Nav-headers/properities.html">Properties</a></li>
+                <li><a href="/Nav-headers/contact.html">Contact</a></li>
+                <li><a href="/Nav-headers/blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>FAQs</h1>
+                <p>Find answers to the most frequently asked questions about our services.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq">
+            <button class="faq-question">What is LandVerse? <span class="toggle-icon">^</span></button>
+            <p class="faq-answer">LandVerse is a platform that connects businesses and vendors for seamless collaboration and growth.</p>
+        </div>
+
+        <div class="faq">
+            <button class="faq-question">How do I list my property on LandVerse? <span class="toggle-icon">^</span></button>
+            <p class="faq-answer">You can list your property by signing up, navigating to the 'Properties' section, and filling out the required details.</p>
+        </div>
+
+        <div class="faq">
+            <button class="faq-question">Is there a fee for using LandVerse? <span class="toggle-icon">^</span></button>
+            <p class="faq-answer">Basic property listings are free, but we offer premium packages for additional visibility and services.</p>
+        </div>
+
+        <div class="faq">
+            <button class="faq-question">How can I contact support? <span class="toggle-icon">^</span></button>
+            <p class="faq-answer">You can reach our support team via the 'Contact' page or email us at support@landverse.com.</p>
+        </div>
+
+        <div class="faq">
+            <button class="faq-question">Can I edit my property listing after submitting? <span class="toggle-icon">^</span></button>
+            <p class="faq-answer">Yes, you can edit your listing at any time by logging into your account and selecting the 'Edit' option.</p>
+        </div>
+
+        <div class="faq">
+            <button class="faq-question">Is my personal information safe on LandVerse? <span class="toggle-icon">^</span></button>
+            <p class="faq-answer">Yes, we take data privacy seriously and use encryption to protect your personal details.</p>
+        </div>
+
+        <div class="faq">
+            <button class="faq-question">How do I promote my listing? <span class="toggle-icon">^</span></button>
+            <p class="faq-answer">You can use our premium promotion services to feature your listing and gain more visibility.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h2 class="footer-logo"><i class="fas fa-building"></i> LandVerse</h2>
+        <p>Connecting businesses and vendors for seamless collaboration and growth.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('.toggle-icon');
+
+                if (answer.style.display === "block") {
+                    answer.style.display = "none";
+                    icon.style.transform = "rotate(0deg)";
+                } else {
+                    answer.style.display = "block";
+                    icon.style.transform = "rotate(180deg)";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
