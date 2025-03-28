@@ -16,35 +16,6 @@ LandVerse is a **modern real estate platform** designed to seamlessly connect **
 
 ---
 
-## 📂 **Folder Structure**
-```plaintext
-LandVerse/
-│── Nav-headers/
-│   ├── about.html
-│   ├── services.html
-│   ├── properties.html
-│   ├── contact.html
-│   ├── blog.html
-│   ├── login.html
-│   ├── register.html
-│── Footers/
-│   ├── allproducts.html
-│   ├── Faqs.html
-│   ├── terms&conditions.html
-│   ├── promotionaloffers.html
-│   ├── wishlist.html
-│── styles/
-│   ├── samplertrp.css
-│── assets/
-│   ├── property-1.jpg
-│   ├── property-2.jpg
-│   ├── property-3.jpg
-│   ├── hero-banner.png
-│── js/
-│   ├── rtrp.js
-│── samplertrp.html
-
----
 ## 🛠 **Technologies Used**
 | Technology    | Description                                      |
 |--------------|--------------------------------------------------|
